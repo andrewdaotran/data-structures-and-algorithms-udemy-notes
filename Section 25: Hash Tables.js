@@ -62,6 +62,32 @@ class HashTable {
 		}
 		return undefined
 	}
+	keys() {
+		let keysArr = []
+		for (let slot of this.keyMap) {
+			if (slot) {
+				for (let arr of slot) {
+					if (!keysArr.includes(arr[0])) {
+						keysArr.push(arr[0])
+					}
+				}
+			}
+		}
+		return keysArr
+	}
+	values() {
+		let valuesArr = []
+		for (let slot of this.keyMap) {
+			if (slot) {
+				for (let arr of slot) {
+					if (!valuesArr.includes(arr[1])) {
+						valuesArr.push(arr[1])
+					}
+				}
+			}
+		}
+		return valuesArr
+	}
 }
 
 console.log('hello')
@@ -72,6 +98,8 @@ table.set('purple', 'stuffed')
 table.set('teal', 'stuff')
 table.set('teak', 'stufl')
 table.set('blue', 'marill')
+table.set('blue', 'marill')
 console.log(table.get('blue'))
 console.log(table.get('tel'))
 console.log(table)
+console.log(table.keys())
