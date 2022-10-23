@@ -89,17 +89,3 @@ class HashTable {
 		return valuesArr
 	}
 }
-
-console.log('hello')
-
-let table = new HashTable(10)
-
-table.set('purple', 'stuffed')
-table.set('teal', 'stuff')
-table.set('teak', 'stufl')
-table.set('blue', 'marill')
-table.set('blue', 'marill')
-console.log(table.get('blue'))
-console.log(table.get('tel'))
-console.log(table)
-console.log(table.keys())
